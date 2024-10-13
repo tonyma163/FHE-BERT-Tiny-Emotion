@@ -327,17 +327,17 @@ void FHEController::load_rotation_keys(const string& filename, bool verbose) {
         cout << endl;
     }
 }
-
+/*
 void FHEController::clear_bootstrapping_and_rotation_keys(int bootstrap_num_slots) {
     FHECKKSRNS* derivedPtr = dynamic_cast<FHECKKSRNS*>(context->GetScheme()->GetFHE().get());
     derivedPtr->m_bootPrecomMap.erase(bootstrap_num_slots);
     clear_rotation_keys();
 }
-
+*/
 void FHEController::clear_rotation_keys() {
     context->ClearEvalAutomorphismKeys();
 }
-
+/*
 void FHEController::clear_context(int bootstrapping_key_slots) {
     if (bootstrapping_key_slots != 0)
         clear_bootstrapping_and_rotation_keys(bootstrapping_key_slots);
@@ -346,7 +346,7 @@ void FHEController::clear_context(int bootstrapping_key_slots) {
 
     context->ClearEvalMultKeys();
 }
-
+*/
 /*
  * CKKS Encoding/Decoding/Encryption/Decryption
  */

@@ -11,6 +11,7 @@ logging.set_verbosity_error()
 tokenizer = AutoTokenizer.from_pretrained("prajjwal1/bert-tiny")
 model = AutoModelForSequenceClassification.from_pretrained("prajjwal1/bert-tiny")
 trained = torch.load('../notebooks/SST-2-BERT-tiny.bin', map_location=torch.device('cpu'))
+trained.pop('bert.embeddings.position_ids', None) # Remove unexpected keys
 model.load_state_dict(trained, strict=True)
 model.eval()
 

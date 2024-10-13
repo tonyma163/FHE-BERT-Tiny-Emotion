@@ -19,7 +19,7 @@ Ctxt pooler(Ctxt input);
 Ctxt classifier(Ctxt input);
 
 //Set to True to test the program on the IDE
-bool IDE_MODE = true;
+bool IDE_MODE = false;
 
 string input_folder;
 
