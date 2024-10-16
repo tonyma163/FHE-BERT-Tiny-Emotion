@@ -33,7 +33,7 @@ void FHEController::generate_context(bool serialize, bool secure) {
     uint32_t levelsUsedBeforeBootstrap = 12;
 
     circuit_depth = levelsUsedBeforeBootstrap + FHECKKSRNS::GetBootstrapDepth(approxBootstrapDepth, level_budget, SPARSE_TERNARY);
-
+    
     cout << endl << "Ciphertexts depth: " << circuit_depth << ", available multiplications: " << levelsUsedBeforeBootstrap - 2 << endl;
 
     parameters.SetMultiplicativeDepth(circuit_depth);
