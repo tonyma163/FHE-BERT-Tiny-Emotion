@@ -107,8 +107,9 @@ int main(int argc, char *argv[]) {
         
         system(("python3 ../newsrc/python/Precision.py \"" + text + "\" " + "\"" + result_str + "\" " + to_string(timing)).c_str());
     } else {
-        cout << "Outcome: ";
-        cout << GREEN_TEXT << emotions[max_index] << RESET_COLOR << endl;
+        //cout << "Outcome: ";
+        //cout << GREEN_TEXT << emotions[max_index] << RESET_COLOR << endl;
+        cout << "Outcome: " << emotions[max_index] << endl;
     }
 
     /*
