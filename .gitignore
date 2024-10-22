@@ -52,4 +52,5 @@ checkpoint/
 .idea/
 
 src/tmp_embeddings/
+emotionsrc/tmp_embeddings/
 notebooks/.ipynb_checkpoints/
