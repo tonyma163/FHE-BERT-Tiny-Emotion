@@ -1294,7 +1294,7 @@ Ctxt FHEController::eval_inverse_naive(const Ctxt &c, double min, double max) {
 }
 
 Ctxt FHEController::eval_inverse_naive_2(const Ctxt &c, double min, double max, double mult) {
-    return context->EvalChebyshevFunction([mult](double x) -> double { return mult / x; }, c, min, max, 228); // 200
+    return context->EvalChebyshevFunction([mult](double x) -> double { return mult / x; }, c, min, max, 326); // 326 // 228
 }
 
 Ctxt FHEController::eval_gelu_function(const Ctxt &c, double min, double max, double mult, int degree) {

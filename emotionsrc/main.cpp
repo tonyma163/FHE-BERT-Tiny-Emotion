@@ -217,7 +217,7 @@ Ctxt encoder2(vector<Ctxt> inputs) {
 
     controller.print_min_max(scores_sum);
 
-    Ctxt scores_denominator = controller.eval_inverse_naive_2(scores_sum, 1.31, 6514.89, 1); // 68336.18 // 6514.89
+    Ctxt scores_denominator = controller.eval_inverse_naive_2(scores_sum, 1.31, 68336.18, 1); // 68336.18 // 6514.89
 
     scores_denominator = controller.bootstrap(scores_denominator);
 
@@ -366,7 +366,7 @@ vector<Ctxt> encoder1() {
     scores = controller.eval_exp(scores, inputs.size());
 
     Ctxt scores_sum = controller.rotsum(scores, 128, 128);
-    Ctxt scores_denominator = controller.eval_inverse_naive(scores_sum, 1.63, 4670.44);
+    Ctxt scores_denominator = controller.eval_inverse_naive(scores_sum, 1.63, 4670.44); // 4670.44
 
     scores = controller.mult(scores, scores_denominator);
 
