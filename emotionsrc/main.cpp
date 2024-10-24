@@ -88,6 +88,7 @@ int main(int argc, char *argv[]) {
 
     int timing = (duration_cast<milliseconds>( high_resolution_clock::now() - start)).count() / 1000.0;
     if (verbose) cout << endl << "The evaluation of the FHE circuit took: " << timing << " seconds." << endl;
+    cout << endl << "The evaluation of the FHE circuit took: " << timing << " seconds." << endl;
 
     vector<string> emotions = {"sadness", "joy", "love", "anger", "fear", "surprise"};
     int max_index = std::max_element(plain_result.begin(), plain_result.end()) - plain_result.begin();
