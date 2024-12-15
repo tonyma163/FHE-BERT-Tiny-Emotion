@@ -38,6 +38,6 @@ find_package(GSL REQUIRED)
 include_directories(${GSL_INCLUDE_DIR})
 
 
-add_executable(FHE-BERT-Tiny src/main.cpp src/FHEController.cpp src/FHEController.h src/Utils.h)
+add_executable(FHE-BERT-Tiny emotionsrc/main.cpp emotionsrc/FHEController.cpp emotionsrc/FHEController.h emotionsrc/Utils.h)
 
 
