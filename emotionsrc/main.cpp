@@ -108,31 +108,8 @@ int main(int argc, char *argv[]) {
         
         system(("python3 ../newsrc/python/Precision.py \"" + text + "\" " + "\"" + result_str + "\" " + to_string(timing)).c_str());
     } else {
-        //cout << "Outcome: ";
-        //cout << GREEN_TEXT << emotions[max_index] << RESET_COLOR << endl;
         cout << "Outcome: " << emotions[max_index] << endl;
     }
-
-    /*
-    if (plain) {
-        cout << "Outcomes:" << endl << "FHE              : ";
-        if (plain_result[0] > plain_result[1]){
-            cout << "negative sentiment!" << endl;
-        } else {
-            cout << "positive sentiment!" << endl;
-        }
-        system(("python3 ../emotionsrc/python/PlainCircuit.py \"" + text + "\"").c_str());
-        system(("python3 ../emotionsrc/python/Precision.py \"" + text + "\" " + "\"[" + to_string(plain_result[0]) + ", " +
-                to_string(plain_result[1]) + "\" " + to_string(timing)).c_str());
-    } else {
-        cout << "Outcome: ";
-        if (plain_result[0] > plain_result[1]){
-            cout << GREEN_TEXT << "negative" << RESET_COLOR << " sentiment!" << endl;
-        } else {
-            cout << GREEN_TEXT << "positive" << RESET_COLOR << " sentiment!" << endl;
-        }
-    }
-    */
 
 }
 
