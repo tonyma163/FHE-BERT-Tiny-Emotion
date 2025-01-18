@@ -249,6 +249,7 @@ Ctxt encoder2(vector<Ctxt> inputs) {
 
     for (int i = 0; i < output.size(); i++) {
         output[i] = controller.add(output[i], inputs[i]);
+        output[i] = controller.bootstrap(output[i]);
     }
 
     Ctxt wrappedOutput = controller.wrapUpExpanded(output);
@@ -262,6 +263,7 @@ Ctxt encoder2(vector<Ctxt> inputs) {
 
     Ptxt vy = controller.read_plain_input("../emotion-precompute/layer1_selfoutput_vy.txt", wrappedOutput->GetLevel(), 1);
     wrappedOutput = controller.mult(wrappedOutput, vy);
+    wrappedOutput = controller.bootstrap(wrappedOutput);
     Ptxt bias = controller.read_plain_expanded_input("../emotion-precompute/layer1_selfoutput_normbias.txt", wrappedOutput->GetLevel(), 1, inputs.size());
     wrappedOutput = controller.add(wrappedOutput, bias);
 
@@ -428,7 +430,7 @@ vector<Ctxt> encoder1() {
     //cout << "level: " << wrappedOutput -> GetLevel() << endl;
 
     // origin (move to the a upper line)
-    //wrappedOutput = controller.bootstrap(wrappedOutput);
+    wrappedOutput = controller.bootstrap(wrappedOutput);
     
     Ctxt output_copy = wrappedOutput->Clone(); //Required at the last layernorm
 
